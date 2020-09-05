@@ -6,20 +6,20 @@
 
 
 <body>
-    
+
     <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
         <img src="https://camo.githubusercontent.com/f4166c31895d3e139e1470cc6693c2692e92ae1d/68747470733a2f2f692e696d6775722e636f6d2f514762475552382e706e67" width="40" height="40" class="d-inline-block align-top" alt="">
         SurveyBot
         </a>
-        <a class="navbar-text">Trabalho final da Disciplina de Algortimos I</a>
+        <a class="navbar-text">Trabalho final da Disciplina de Algortimos I 2020.1</a>
     </nav>
 
     <div class="card">
-        
+
         <br>
-    
+
 
         <div class="highlight-phone">
             <div class="container">
@@ -37,18 +37,34 @@
                 </div>
             </div>
         </div>
-    
-    
+
+
         <div class="card-body">
-            
-            
+
+            <div class="row">
+                <div class="col-12 align-self-center">
+                    <div class="card text-white">
+                        <div class="card-body" style="color:black">
+                            <h4 class="card-title">Alunos:</h4>
+                            <p class="card-text" ><b>Francisco Jonatas Siqueira Coelho</b>  Email: fjsc@cin.ufpe.br</p>
+                            <p class="card-text"><b>Edmilson Rodrigues do Nascimento Júnior</b>  Email: ernj@cin.ufpe.br</p>
+                            <p class="card-text"><a href="https://github.com/edrodrigues/SurveyBot">Link para Github</a></li></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+
             <div class="row">
                 <div class="col-6 align-self-center">
                     <div class="card text-white bg-danger">
                         <div class="card-body">
                             <h3 class="card-title">PARA O CRIADOR DE FORMS:</h3>
                             <p class="card-text">Existem algumas limitações nessa primeira versão que devem ser seguidas para que tudo funcione como esperado:</p>
-                            
+
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item list-group-item-danger">1 - O questionário deve estar aberto, sem necessidade de login para respondê-lo.</li>
                                 <li class="list-group-item list-group-item-danger">2 - Não insira perguntas que pedem para fazer o upload arquivos, esse tipo de pergunta requer o login do usuário.</li>
@@ -69,7 +85,7 @@
                     <div class="card text-white bg-success">
                         <div class="card-body">
                             <h3 class="card-title">PARA QUEM DESEJA RESPONDER OS FORMS:</h3>
-                            
+
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item list-group-item-success"><a href="https://api.whatsapp.com/send?phone=14155238886">1 - Adicione o contato: 1 415 523 8886</a></li>
                                 <li class="list-group-item list-group-item-success">2 - Após adicionar o contato envie a seguinte mensagem: join salmon-problem.</li>
@@ -82,17 +98,17 @@
                     </div>
                 </div>
             </div>
-                
+
             <br>
-        
+
             <form action="processar" method="POST">
-    
-            <div class="row">    
+
+            <div class="row">
                 <div class="col-12">
                     <div class="card text-white bg-light">
                         <div class="card-body">
                             <h3 class="card-title" style="color:black" id="inputURL">Cole a URL do seu Google Form</h3>
-                            
+
                             <div>
                                 <textarea class="form-control" name="urlQuestionario" placeholder="Insira a URL do Formulário" >{{urlForm}}</textarea>
                                 <br>
@@ -108,13 +124,13 @@
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <br>
             <br>
-            
+
             <h3 class="card-title" id="inputADM">FERRAMENTAS DO ADM</h3>
-            
+
             <div>
                 <textarea class="form-control" name="formADM" >{{textoADM}}</textarea>
                 <br>
@@ -127,7 +143,7 @@
             <br>
 
             <input type="submit" class="btn btn-dark btn-sm" name="botaoADM" value="Deletar Tudo">
-    
+
             </form>
         </div>
     </div>
@@ -136,7 +152,7 @@
 
 {% if scroll %}
 <script>
-    window.location.href="#{{ scroll }}";
+    window.location.href="#{{ scroll }}"; //Rola a tela para determinada região
 </script>
 {% endif %}
 
