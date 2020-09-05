@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>SurveyBot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+<body>
+    
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+        <img src="https://camo.githubusercontent.com/f4166c31895d3e139e1470cc6693c2692e92ae1d/68747470733a2f2f692e696d6775722e636f6d2f514762475552382e706e67" width="40" height="40" class="d-inline-block align-top" alt="">
+        SurveyBot
+        </a>
+        <a class="navbar-text">Trabalho final da Disciplina de Algortimos I</a>
+    </nav>
+
+    <div class="card">
+        
+        <br>
+    
+
+        <div class="highlight-phone">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 align-self-center">
+                        <div class="intro" style="text-align:center">
+                            <h2>SurveyBot</h2>
+                            <p>Aplique seus questionários do Google Form via WhatsApp.</p>
+                            <p>Nossa ferramenta que junta a popularidade do Google Form com o alcance do WhatsApp.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 align-self-center">
+                        <img src="https://i.pinimg.com/originals/0b/bc/cd/0bbccd0ebd9272b5764b7005258eb478.png" width="150" height="150" class="d-inline-block align-top" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="card-body">
+            
+            
+            <div class="row">
+                <div class="col-6 align-self-center">
+                    <div class="card text-white bg-danger">
+                        <div class="card-body">
+                            <h3 class="card-title">PARA O CRIADOR DE FORMS:</h3>
+                            <p class="card-text">Existem algumas limitações nessa primeira versão que devem ser seguidas para que tudo funcione como esperado:</p>
+                            
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-danger">1 - O questionário deve estar aberto, sem necessidade de login para respondê-lo.</li>
+                                <li class="list-group-item list-group-item-danger">2 - Não insira perguntas que pedem para fazer o upload arquivos, esse tipo de pergunta requer o login do usuário.</li>
+                                <li class="list-group-item list-group-item-danger">3 - No texto das perguntas ou respostas NÃO use caracteres do tipo: [ ] (abre colchete ou fecha colchete), isso irá confundir o sistema, opte por usar ( ) (Parenteses).</li>
+                                <li class="list-group-item list-group-item-danger">4 - Não use imagens no form.</li>
+                                <li class="list-group-item list-group-item-danger">5 - Escreva textos simples e curtos no form, isso facilita a usabilidade do sistema em celulares com telas pequenas.</li>
+                                <li class="list-group-item list-group-item-danger">6 - Evite peguntas do tipo Grade (Grade de Múltipla escolha ou Grade da caixa de Seleção), esse tipo de pergunta pode confundir o usuário no celular.</li>
+                                <li class="list-group-item list-group-item-danger">7 - Não use descriçao nas questões ou validação da resposta, deixe as limitações de resposta claras no texto da pergunta.</li>
+                                <li class="list-group-item list-group-item-danger">8 - Crie fomularios onde existe uma lineraridade nas questões, de forma que elas seja respondidas uma após a outra, não crie questões cuja resposta pule outras questões.</li>
+                                <li class="list-group-item list-group-item-danger">9 - Não use a palava 'stop', ela fechar permanentemente a comunicação entre o sistema e o usuario.</li>
+                                <li class="list-group-item list-group-item-danger">10 - Por fim, ao final do form deixe uma frase de agradecimento pela participação do usuário.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h3 class="card-title">PARA QUEM DESEJA RESPONDER OS FORMS:</h3>
+                            
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-success"><a href="https://api.whatsapp.com/send?phone=14155238886">1 - Adicione o contato: 1 415 523 8886</a></li>
+                                <li class="list-group-item list-group-item-success">2 - Após adicionar o contato envie a seguinte mensagem: join salmon-problem.</li>
+                                <li class="list-group-item list-group-item-success">3 - Os passos acima servem para que o permitir que o sistema envie mensagens para seu celular.</li>
+                                <li class="list-group-item list-group-item-success">4 - Agora envie um 'Oi', e o FlowBot irá iniciar o processo para responder ao questionário, se ele não responder aguarde uns minutos e tente novamente enviar a palava 'Oi'.</li>
+                                <li class="list-group-item list-group-item-success">5 - Se não quer receber mensagens do FlowBot basta enviar a palava: stop</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <br>
+        
+            <form action="processar" method="POST">
+    
+            <div class="row">    
+                <div class="col-12">
+                    <div class="card text-white bg-light">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color:black" id="inputURL">Cole a URL do seu Google Form</h3>
+                            
+                            <div>
+                                <textarea class="form-control" name="urlQuestionario" placeholder="Insira a URL do Formulário" >{{urlForm}}</textarea>
+                                <br>
+                                <input type="submit" class="btn btn-success btn-sm" name="botaoForm" value="Importar Questões">
+                                <br>
+                                <br>
+                                <textarea class="form-control" name="textQuestionario" rows="10">{{questionario}}</textarea>
+                                <br>
+                                <input type="submit" class="btn btn-success btn-sm" name="botaoForm" value="Recuperar Questões do Banco">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <br>
+            <br>
+            
+            <h3 class="card-title" id="inputADM">FERRAMENTAS DO ADM</h3>
+            
+            <div>
+                <textarea class="form-control" name="formADM" >{{textoADM}}</textarea>
+                <br>
+                <input type="submit" class="btn btn-success btn-sm" name="botaoADM" value="Lista todos Usuários">
+                <input type="submit" class="btn btn-warning btn-sm" name="botaoADM" value="Buscar Usuário pelo idUsuario">
+                <input type="submit" class="btn btn-danger btn-sm" name="botaoADM" value="Deletar Usuário pelo ID">
+            </div>
+
+            <br>
+            <br>
+
+            <input type="submit" class="btn btn-dark btn-sm" name="botaoADM" value="Deletar Tudo">
+    
+            </form>
+        </div>
+    </div>
+</body>
+
+
+{% if scroll %}
+<script>
+    window.location.href="#{{ scroll }}";
+</script>
+{% endif %}
+
+</html>
