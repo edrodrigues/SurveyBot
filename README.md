@@ -8,9 +8,10 @@ O objetivo do projeto é permitir que usuários apliquem pesquisas do Google For
 URL de acesso: https://jonatascoelho.pythonanywhere.com/ 
 
 Integrações: Twilion API
+
 Hospedagem: Python Anywhere
 
-Libraries Usadas: Flask, mysql.connector, requests, urllib, twillio, random
+Libraries Usadas: Flask, mysql.connector, requests, urllib, twillio, random (trecho comentado)
 
 Contagem de linhas: Total: 1621 linhas
   flask_app.py - 438 linhas
@@ -19,4 +20,5 @@ Contagem de linhas: Total: 1621 linhas
   funcoeswhatsapp.py - 26 linhas
   index.html - 159 linhas
   
-  Muito obrigado ao Prof. Castor e aos monitores Alessandra e Bruno. Nós curtimos muito a disciplina!
+  
+Nosso muito obrigado ao Prof. Castor e aos monitores Alessandra e Bruno. Nós curtimos muito a disciplina!
