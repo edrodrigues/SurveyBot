@@ -10,6 +10,13 @@ URL de acesso: https://jonatascoelho.pythonanywhere.com/
 Integrações: Twilion API
 Hospedagem: Python Anywhere
 
-Libraries Usadas: 
+Libraries Usadas: Flask, mysql.connector, requests, urllib, twillio, random
 
-Contagem de linhas: 
+Contagem de linhas: Total: 1621 linhas
+  flask_app.py - 438 linhas
+  funcoesdobanco.py - 309 linhas
+  funcoesquestionario.py - 689 linhas
+  funcoeswhatsapp.py - 26 linhas
+  index.html - 159 linhas
+  
+  Muito obrigado ao Prof. Castor e aos monitores Alessandra e Bruno. Nós curtimos muito a disciplina!
