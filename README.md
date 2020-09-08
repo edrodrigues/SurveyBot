@@ -7,7 +7,7 @@ O objetivo do projeto é permitir que usuários apliquem pesquisas do Google For
 
 URL de acesso: https://jonatascoelho.pythonanywhere.com/ 
 
-Integrações: Twilion API
+Integrações: Twilio API
 
 Hospedagem: Python Anywhere
 
